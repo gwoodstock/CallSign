@@ -1,6 +1,6 @@
 # CallSign
 
-## Problem [^1]
+## Problem [^bignote]
 Our client is a ski company. At one of their ski parks, they are facing long queues at the ski lifts. They would like us to reduce the amount of time their customers spend waiting. In order to do so, the company would like us to investigate two ski lift alternatives.
 
 1.	Installing a Faster Ski Lift; replacing existing setup
@@ -39,8 +39,6 @@ Our client is a ski company. At one of their ski parks, they are facing long que
     - Queue, lift, slope, queue, lift, slope, etc
 
 
-[^1]: Case study question has been adapted to the above format for clarity of message. Unedited versions can be found linked below
-
-
-Original Prompt .docx \
-Original Prompt .pdf
+[^bignote]: Case study question has been adapted to the above format for clarity of message. An unedited version can be found linked below \
+[Unedited Prompt .docx](./Original_Case_Study_Question.docx) \
+[Unedited Prompt .pdf](./Original_Case_Study_Question.pdf)
