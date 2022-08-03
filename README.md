@@ -1,12 +1,12 @@
 # CallSign Technical Assessment
-Presented by Gene Woodstock, Data Scientist
+Prepared by Gene Woodstock, Data Scientist
 
 ## Problem [^bignote]
 Our client is a ski company. At one of their ski parks, they are facing long queues at the ski lifts. They would like us to <u>reduce the amount of time their customers spend waiting.</u> In order to do so, the company would like us to investigate two ski lift alternatives.
 
-1.	Install a faster ski lift; replacing existing setup.
+1.	Speed up existing or install faster ski lift.
 2.	Install a second ski lift, identical to the ski lift currently in operation.
-3.  Keep exisiting setup as is. Make no changes.
+3.  Keep existing setup as is. Make no changes.
 
 <br>
 
@@ -43,7 +43,7 @@ Our client is a ski company. At one of their ski parks, they are facing long que
 
 ## Solution
 
-The proportion of skiers at each location on the mountain will be constant at all times. The expected number of skiers will be the product of the number of skiers per minute whom are ascending the mountain and the time spent (in minutes) at each location. The ski lift is "bottle necking" the flow of skiers. Therefore, the rate of travel will be constant across all locations, with a queue forming at the base of the mountain as the bottle neck is cleared.
+The proportion of skiers at each location on the mountain will always be constant. The expected number of skiers will be the product of the number of skiers per minute whom are ascending the mountain and the time spent (in minutes) at each location. The ski lift is "bottle necking" the flow of skiers. Therefore, the rate of travel will be constant across all locations, with a queue forming at the base of the mountain as the bottle neck is cleared.
 
 Skiers will always be in 1 of 3 ordinal locations: queueing for a ski lift, riding a lift, or skiing down the slopes. The rate and time spent at 2 of the 3 locations have been given for each of the 3 lift options. Therefore, the number of skiers at the 3rd location (the queue) will always be the total number of skiers minus the sum of skiers at the other 2 locations (the lift and the slopes).
 
@@ -59,9 +59,56 @@ Time in Queue = Skiers in queue / Lift Rate
 
 <br>
 
-## Visualize
-![Wait times](/Assets/wait-times.png "Wait times by option")
+## Findings
+
+Installing a second lift will reduce wait times more than increasing the speed of the existing lift.
+
+Further questions remain regarding the business decision to do so. Discussed below...
+
+<br>
+
+## Tableau Dashboard
+
+Explore the data yourself on an [interactive dashboard](https://public.tableau.com/shared/B6MZBBSQR).
+
+
+![Preview Image](/assets/tableau.png "Preview Image. Click link above to explore!")
+
+<br>
+
+## Presentation Slides
+
+A more [comprehensive walkthrough](./Ski%20Lift%20Case%20Study.pdf) of the project via Google Slides in .pdf form.
+
+<br>
+
+## Discussion
+
+### Second Lift
+- Relative to a faster lift, additional time is spent sitting on a lift chair traveling up the mountain. 
+    - Is this better?
+- Skiers may avoid long lines during peak hours by spending more time in the lodge gift shop or dining at the restaurant.
+- How much does a second ski lift cost?
+    - Is loss from customer churn greater than the construction cost, staff to operate, and maintenance for a new lift?
+- Will slopes time descending the mountain be identical for both lifts?
+
+### Existing Lift, Adjusted
+- Does risk of injury increase when speeding up the ski lift?
+Are less experienced skiers more likely to be intimidated by the increase in speed? 
+- Will additional maintenance be required?
+    - Will down time increase due to additional maintenance?
+- Will the rate of skiers reaching the peak double due to the increase in speed?
+- Would shorter wait times from slowing down the existing lift accomplish the same objective?
+- On days where wait times will always be 0, would increasing lift speed increase enjoyment for high volume skiers?
+
+<br>
+
+## Thank you!
+I hope you enjoy reviewing this project half as much as I had making it! More of my work can be found on my [portfolio](https://www.GeneWoodstock.com).
+
+<br>
+<br>
 
 [^bignote]: Case study question has been adapted to the above format for clarity of message. An unedited version can be found linked below. \
-[Unedited Prompt .docx](./Case-Study/Original_Case_Study_Question.docx) \
-[Unedited Prompt .pdf](./Case-Study/Original_Case_Study_Question.pdf)
+[Unedited Prompt .docx](./case-study/Original_Case_Study_Question.docx) \
+[Unedited Prompt .pdf](./case-study/Original_Case_Study_Question.pdf)
