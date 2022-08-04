@@ -43,9 +43,15 @@ Our client is a ski company. At one of their ski parks, they are facing long que
 
 ## Solution
 
-The proportion of skiers at each location on the mountain will always be constant. The expected number of skiers will be the product of the number of skiers per minute whom are ascending the mountain and the time spent (in minutes) at each location. The ski lift is "bottle necking" the flow of skiers. Therefore, the rate of travel will be constant across all locations, with a queue forming at the base of the mountain as the bottle neck is cleared.
+The proportion of skiers at each location on the mountain will always be constant. 
 
-Skiers will always be in 1 of 3 ordinal locations: queueing for a ski lift, riding a lift, or skiing down the slopes. The rate and time spent at 2 of the 3 locations have been given for each of the 3 lift options. Therefore, the number of skiers at the 3rd location (the queue) will always be the total number of skiers minus the sum of skiers at the other 2 locations (the lift and the slopes).
+The expected number of skiers will be the product of the number of skiers per minute whom are ascending the mountain and the time spent (in minutes) at each location. 
+
+The ski lift is "bottle necking" the flow of skiers. Therefore, the rate of travel will be constant across all locations, with a queue forming at the base of the mountain as the bottle neck is cleared.
+
+Skiers will always be in 1 of 3 ordinal locations: queueing for a ski lift, riding a lift, or skiing down the slopes. 
+
+The rate and time spent at 2 of the 3 locations have been given for each of the 3 lift options. Therefore, the number of skiers at the 3rd location (the queue) will always be the total number of skiers minus the sum of skiers at the other 2 locations (the lift and the slopes).
 
 <br>
 
@@ -55,13 +61,57 @@ Skiers on the lift = Time on lift * Lift Rate \
 Skiers on the slopes = Time on slopes * Lift Rate
 
 Skiers in queue = (Total Skiers - (Skiers on Lift + Skiers on Slopes)) \
+
 Time in Queue = Skiers in queue / Lift Rate
 
 <br>
 
+
+y = time in queue \
+x = total skiers on the mountain
+
+### Existing Lift
+**Skiers:** \
+Lift: 10 min * 5 skiers/min = 50 skiers \
+Slopes: 5 min * 5 skiers/min = 25 skiers \
+Queue: (x skiers - 75 skiers) ) / (5 skiers/min) 
+<br>
+
+**Time:**
+Queue: y = 0.2x - 15
+
+### Faster Lift
+**Skiers:** \
+Lift: 5 min * 5 skiers/min = 25 skiers \
+Slopes: 5 min * 5 skiers/min = 25 skiers \
+Queue: (x skiers - 50 skiers) / (5 skiers/min)
+<br>
+
+**Time:**
+Queue: y = 0.2x - 10
+
+### Second Lift
+**Skiers:** \
+Lift: 10 min / 10 skiers/min = 100 skiers
+Slopes: 5 min * 10 skiers/min = 50 skiers
+Queue: (x skiers - 150 skiers) / 10 skiers/min
+<br>
+
+**Time:** \
+Queue: y = 0.1x - 15
+
+
 ## Findings
 
-Installing a second lift will reduce wait times more than increasing the speed of the existing lift.
+| Option | Formula |
+| ------ | ------- |
+| Existing |  y = 0.2x - 15 |
+| Faster | y = 0.2x - 10 |
+| Second | y = 0.1x - 15 |
+
+The functions for calculating queue wait time are linear. Given the number of skiers on the mountain can never be negative, the wait time for Second will always be less than Existing. Existing will always be less than Faster.
+
+Installing a second lift will reduce wait times more than increasing the speed of the existing lift or keeping the existing system.
 
 Further questions remain regarding the business decision to do so. Discussed below...
 
@@ -72,7 +122,7 @@ Further questions remain regarding the business decision to do so. Discussed bel
 Explore the data yourself on an [interactive dashboard](https://public.tableau.com/shared/B6MZBBSQR).
 
 
-![Preview Image](/assets/tableau.png "Preview Image. Click link above to explore!")
+![Preview Image](/Assets/tableau.png "Preview Image. Click link above to explore!")
 
 <br>
 
@@ -110,5 +160,5 @@ I hope you enjoy reviewing this project half as much as I had making it! More of
 <br>
 
 [^bignote]: Case study question has been adapted to the above format for clarity of message. An unedited version can be found linked below. \
-[Unedited Prompt .docx](./case-study/Original_Case_Study_Question.docx) \
-[Unedited Prompt .pdf](./case-study/Original_Case_Study_Question.pdf)
+[Unedited Prompt .docx](./Case-study/Original_Case_Study_Question.docx) \
+[Unedited Prompt .pdf](./Case-study/Original_Case_Study_Question.pdf)
