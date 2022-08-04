@@ -1,6 +1,13 @@
 # CallSign Technical Assessment
 Prepared by Gene Woodstock, Data Scientist
 
+## Quick Links
+- [Jupyter Notebook](./Formulas.ipynb)
+- [Tableau Dashboard](https://public.tableau.com/shared/B6MZBBSQR)
+- [Presentation Slides](Ski%20Lift%20Case%20Study.pdf)
+
+<br>
+
 ## Problem [^bignote]
 Our client is a ski company. At one of their ski parks, they are facing long queues at the ski lifts. They would like us to <u>reduce the amount of time their customers spend waiting.</u> In order to do so, the company would like us to investigate two ski lift alternatives.
 
