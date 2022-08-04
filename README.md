@@ -65,48 +65,55 @@ The rate and time spent at 2 of the 3 locations have been given for each of the 
 ## Formulas
 
 Skiers on the lift = Time on lift * Lift Rate \
-Skiers on the slopes = Time on slopes * Lift Rate
-
-Skiers in queue = (Total Skiers - (Skiers on Lift + Skiers on Slopes)) \
+Skiers on the slopes = Time on slopes * Lift Rate \
+Skiers in queue = (Total Skiers - (Skiers on Lift + Skiers on Slopes))
 
 Time in Queue = Skiers in queue / Lift Rate
 
-<br>
-
-
 y = time in queue \
 x = total skiers on the mountain
+
+<br>
 
 ### Existing Lift
 **Skiers:** \
 Lift: 10 min * 5 skiers/min = 50 skiers \
 Slopes: 5 min * 5 skiers/min = 25 skiers \
-Queue: (x skiers - 75 skiers) ) / (5 skiers/min) 
+Queue: (x skiers - 75 skiers) 
 <br>
 
-**Time:**
-Queue: y = 0.2x - 15
+**Queue Time:** \
+y = (x skiers - 75 skiers) / (5 skiers/min) \
+y = 0.2x - 15
+
+<br>
 
 ### Faster Lift
 **Skiers:** \
 Lift: 5 min * 5 skiers/min = 25 skiers \
 Slopes: 5 min * 5 skiers/min = 25 skiers \
-Queue: (x skiers - 50 skiers) / (5 skiers/min)
+Queue: (x skiers - 50 skiers)
 <br>
 
-**Time:**
-Queue: y = 0.2x - 10
+**Queue Time:** \
+y = (x skiers - 50 skiers) / (5 skiers/min) \
+y = 0.2x - 10
+
+<br>
 
 ### Second Lift
 **Skiers:** \
-Lift: 10 min / 10 skiers/min = 100 skiers
-Slopes: 5 min * 10 skiers/min = 50 skiers
-Queue: (x skiers - 150 skiers) / 10 skiers/min
+Lift: 10 min / 10 skiers/min = 100 skiers \
+Slopes: 5 min * 10 skiers/min = 50 skiers \
+Queue: (x skiers - 150 skiers)
+
 <br>
 
-**Time:** \
-Queue: y = 0.1x - 15
+**Queue Time:** \
+y = (x skiers - 150 skiers) / 10 skiers/min \
+y = 0.1x - 15
 
+<br>
 
 ## Findings
 
@@ -116,11 +123,14 @@ Queue: y = 0.1x - 15
 | Faster | y = 0.2x - 10 |
 | Second | y = 0.1x - 15 |
 
-The functions for calculating queue wait time are linear. Given the number of skiers on the mountain can never be negative, the wait time for Second will always be less than Existing. Existing will always be less than Faster.
+The functions for calculating queue wait time are linear. Given the number of skiers on the mountain can never be negative, the wait time for Second Lift will always be the lowest given the options presented.[^2] Existing will always be less than Faster.
 
 Installing a second lift will reduce wait times more than increasing the speed of the existing lift or keeping the existing system.
 
 Further questions remain regarding the business decision to do so. Discussed below...
+
+
+[^2]: Queue wait times can be equal when the value of x (skiers on the mountain) produces a negative value for y (queue wait time) in more than one function. Wait times can never be negative in reality.
 
 <br>
 
